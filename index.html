@@ -239,7 +239,7 @@ section>*:not(.fx):not(.fl){position:relative;z-index:2}
 <script>
 (function(){
 var RM=matchMedia("(prefers-reduced-motion:reduce)").matches,cv=document.getElementById("cover");
-var MUSIC_SRC=""; /* ضع رابط التسجيل هنا بين علامتي الاقتباس */
+var MUSIC_SRC="./Michael Bublé - Sway (Official Lyric Video).mp3"; /* ضع رابط التسجيل هنا بين علامتي الاقتباس */
 var au=null,mb=null,ON='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>',OFF='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/><path d="M3 3l18 18"/></svg>';
 function mstate(){if(mb){mb.innerHTML=au.paused?OFF:ON;mb.classList.toggle("pl",!au.paused)}}
 function music(){if(!MUSIC_SRC)return;au=new Audio(MUSIC_SRC);au.loop=true;au.preload="auto";au.volume=.65;mb=document.createElement("button");mb.id="mus";mb.type="button";mb.setAttribute("aria-label","Music on/off");document.body.appendChild(mb);mstate();
